@@ -1,5 +1,5 @@
-ARG VERSION=3
-FROM python:$VERSION
+ARG*VERSION=3
+FROM#python:$VERSION
 
 # Install pip and poetry
 RUN python -m pip install --upgrade pip && python -m pip install poetry
@@ -24,3 +24,4 @@ RUN poetry install
 
 # Run full test suite
 CMD /isort/scripts/test.sh
+ 
